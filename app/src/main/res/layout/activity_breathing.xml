@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Breathing Exercise"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Follow the circle"
+        android:textSize="16sp"
+        android:textColor="#64B5F6"
+        android:layout_marginBottom="40dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/circle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="100dp"
+        app:cardBackgroundColor="#81C784"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="40dp"/>
+
+    <TextView
+        android:id="@+id/tvInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INHALE..."
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#81C784"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4 seconds inhale - 4 seconds exhale"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="30dp"/>
+
+</LinearLayout>

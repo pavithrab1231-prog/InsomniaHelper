@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F0F0F"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📔 Sleep Journal"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tvTodayDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today"
+            android:textSize="14sp"
+            android:textColor="#64B5F6"
+            android:layout_marginBottom="30dp"/>
+
+        <!-- Today's Entry Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#1E1E1E"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today's Entry"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFB74D"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Mood Rating -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="😊 How was your mood today?"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="12dp"/>
+
+                <RatingBar
+                    android:id="@+id/rbMood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:stepSize="1"
+                    android:layout_marginBottom="24dp"/>
+
+                <!-- Sleep Rating -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🛏 How well did you sleep?"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="12dp"/>
+
+                <RatingBar
+                    android:id="@+id/rbSleep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:stepSize="1"
+                    android:layout_marginBottom="24dp"/>
+
+                <!-- Note -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📝 Notes (optional)"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="12dp"/>
+
+                <EditText
+                    android:id="@+id/etNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:hint="Write your thoughts here..."
+                    android:textColorHint="#606060"
+                    android:textColor="#FFFFFF"
+                    android:background="#2D2D2D"
+                    android:padding="16dp"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:layout_marginBottom="24dp"/>
+
+                <Button
+                    android:id="@+id/btnSaveJournal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Save Entry"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#64B5F6"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Weekly Stats Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#1E1E1E"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📊 Weekly Stats"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#81C784"
+                    android:layout_marginBottom="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginEnd="8dp">
+
+                        <TextView
+                            android:id="@+id/tvDaysLogged"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="28sp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Days"
+                            android:textSize="12sp"
+                            android:textColor="#808080"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginEnd="8dp">
+
+                        <TextView
+                            android:id="@+id/tvAvgMood"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="--"
+                            android:textSize="28sp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Avg Mood"
+                            android:textSize="12sp"
+                            android:textColor="#808080"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvAvgSleep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="--"
+                            android:textSize="28sp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Avg Sleep"
+                            android:textSize="12sp"
+                            android:textColor="#808080"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Recent Log Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#1E1E1E"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📝 Recent Entries"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#64B5F6"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/tvLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No entries yet. Start logging above!"
+                    android:textSize="14sp"
+                    android:textColor="#A0A0A0"
+                    android:lineSpacingExtra="8dp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>
